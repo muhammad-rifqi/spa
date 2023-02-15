@@ -1,0 +1,4 @@
+RewriteEngine on
+#RewriteBase /spa/
+
+ErrorDocument 404 /spa/pages/refresh.html

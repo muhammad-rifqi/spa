@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vanilla SPA Router</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div id="root">
+            <nav id="main-nav" class="sidebar">
+                <a href="/spa/" onclick="route()">Home</a>
+                <a href="/spa/about" onclick="route()">About</a>
+                <a href="/spa/lorem" onclick="route()">Lorem</a>
+            </nav>
+            <div id="main-page"></div>
+        </div>
+
+        <script src="js/router.js"></script>
+		<script>		
+			var req = new XMLHttpRequest();
+			req.open('GET', document.location, false);
+			req.send(null);
+			var headers = req.getAllResponseHeaders().toLowerCase();
+			console.log(headers);
+		</script>
+    </body>
+</html>
